@@ -1,0 +1,249 @@
+/* From Uiverse.io by htwarriors108 */
+.button {
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 25px;
+    animation: animate 1.5s linear infinite;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button,
+.display,
+#msg {
+    transition: 0.3s;
+}
+
+.button:active .display {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.button:active .display #msg {
+    -webkit-text-fill-color: #1b1b1b;
+}
+
+.button:hover {
+    scale: 1.15;
+    animation: animate 0.7s linear infinite;
+    transform: translateY(-15px);
+}
+
+.button .display,
+.button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button .display {
+    z-index: 1;
+    background-color: #1b1b1b;
+    height: 42.5px;
+    width: 90px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.button .display #msg {
+    line-height: 42.5px;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.button span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 25px;
+}
+
+.button span:first-child {
+    filter: blur(15px);
+}
+
+.button span:last-child {
+    filter: blur(15px);
+    transition: 0.3s;
+}
+
+.button:hover span:last-child {
+    width: 110%;
+    height: 120%;
+}
+
+
+
+/* togle button */
+/* From Uiverse.io by vinodjangid07 */
+/* To hide the checkbox */
+#checkboxInput {
+    display: none;
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.toggleSwitch::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    background: conic-gradient(rgb(104, 104, 104), white, rgb(104, 104, 104), white, rgb(104, 104, 104));
+    border-radius: 50%;
+    transition-duration: .3s;
+    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.308);
+}
+
+#checkboxInput:checked+.toggleSwitch::after {
+    transform: translateX(100%);
+    transition-duration: .3s;
+}
+
+/* Switch background change */
+#checkboxInput:checked+.toggleSwitch {
+    background-color: rgb(153, 197, 151);
+    transition-duration: .3s;
+}
+
+
+/*  logo */
+
+/* From Uiverse.io by csemszepp */ 
+.contain {
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .contain .btn {
+    position: relative;
+    top: 0;
+    left: 30px;
+    width: 150px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contain .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #1b1b1b;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .contain .btn:hover a {
+    letter-spacing: 3px;
+  }
+  
+  .contain .btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+  }
+  
+  .containe .btn:hover a::before {
+    transform: skewX(45deg) translate(200px);
+  }
+  
+  .contain .btn::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+  }
+  
+  .contain .btn:hover::before /*lightup button*/ {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+  }
+  
+  .contain .btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+  }
+  
+  .contain .btn:hover::after /*lightup button*/ {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+  }
+  
+  .contain .btn:nth-child(1)::before,
+  .contain .btn:nth-child(1)::after {
+    background: #1eff45;
+    box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+          0 0 60px #1eff45;
+  }
+  
