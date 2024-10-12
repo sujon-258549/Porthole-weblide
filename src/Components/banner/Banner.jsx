@@ -45,7 +45,7 @@ const Banner = () => {
                                 <a href="https://www.facebook.com/profile.php?id=100088142062918">
                                     <FaFacebookF className='text-[#01ECFF] border border-[#01ECFF] text-4xl font-bold rounded-full p-2'></FaFacebookF>
                                 </a>
-                                <a href="https://github.com/sujob258549">
+                                <a href="https://github.com/sujon-258549">
                                     <FaGithub className='text-[#01ECFF] border border-[#01ECFF] text-4xl font-bold rounded-full p-2'></FaGithub>
                                 </a>
                                 <a href="https://www.linkedin.com/in/sujon25">
