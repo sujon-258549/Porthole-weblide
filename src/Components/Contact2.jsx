@@ -1,17 +1,13 @@
-import React from 'react';
 
-import './contact2.css'
+import './contact2.css';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import Swal from 'sweetalert2';
 
 const Contact2 = () => {
-
-    // from
-
-
     const {
         register,
         handleSubmit,
@@ -20,9 +16,9 @@ const Contact2 = () => {
 
     const date = new Date();
     const onSubmit = (data) => {
-        console.log(data);
-        const alldata = { data, date }
-        axios.post('http://localhost:3000/contactus', alldata)
+        const alldata = { ...data, date }; 
+        console.log(alldata)
+        axios.post('https://portfolio-pied-eight-66.vercel.app/contactus', alldata)
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({
@@ -32,9 +28,11 @@ const Contact2 = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    console.log(res.data);
                 }
             })
+            .catch(error => {
+                console.error("There was an error submitting the form!", error);
+            });
     };
 
     return (
@@ -51,42 +49,41 @@ const Contact2 = () => {
 
                             <div className="mt-6 space-y-8 md:mt-8">
                                 <p className="flex items-start -mx-2 justify-center lg:justify-start">
-                                   <FaLocationDot className='text-3xl text-[#01ECFF]'></FaLocationDot>
+                                    <FaLocationDot className='text-3xl text-[#01ECFF]'></FaLocationDot>
                                     <span className="mx-2  truncate w-72 dark:text-gray-400">
                                         Rangpur Sadar , Bangladesh
                                     </span>
                                 </p>
 
                                 <p className="flex items-start -mx-2 justify-center lg:justify-start">
-                                <FaPhoneAlt className='text-3xl text-[#01ECFF]'></FaPhoneAlt>
+                                    <FaPhoneAlt className='text-3xl text-[#01ECFF]'></FaPhoneAlt>
                                     <span className="mx-2  truncate w-72 dark:text-gray-400"><a href="tel:01790876529">01790876529</a>, <a href="tel:01516532597">01516532597</a></span>
                                 </p>
 
                                 <p className="flex items-start -mx-2 justify-center lg:justify-start">
-                                <MdEmail className='text-3xl text-[#01ECFF]'></MdEmail>
+                                    <MdEmail className='text-3xl text-[#01ECFF]'></MdEmail>
                                     <span className="mx-2  truncate w-72 dark:text-gray-400"><a href="mailto:sujon258549@gmail.com">sujon258549@gmail.com</a></span>
                                 </p>
                             </div>
-
-
                         </div>
 
                         <div className="mt-8 lg:w-1/2 lg:mt-0 lg:mx-6">
-                            <div className='mian-from'>
-                                <div class="main-card">
-                                    <h4 class="title">Contact form.....</h4>
-                                    <form>
-                                        <label htmlFor="" className='flex justify-start text-white'>Name</label>
-                                        <label class="field" for="logemail">
-                                          <input  {...register('name', { required: true })}
-                                            placeholder="Enter Your Full name"
-                                            className="input-field"
-                                                    />
+                            <div className='main-form'>
+                                <div className="main-card">
+                                    <h4 className="title">Contact form.....</h4>
+                                    <form onSubmit={handleSubmit(onSubmit)}>
+                                        <label htmlFor="name" className='flex justify-start text-white'>Name</label>
+                                        <label className="field">
+                                            <input
+                                                {...register('name', { required: true })}
+                                                placeholder="Enter Your Full name"
+                                                className="input-field"
+                                            />
                                             {errors.name && <span className="text-red-500">This field is required</span>}
                                         </label>
 
-                                        <label htmlFor="" className='flex pt-5 justify-start text-white'>Email</label>
-                                        <label class="field" for="logemail">
+                                        <label htmlFor="email" className='flex pt-5 justify-start text-white'>Email</label>
+                                        <label className="field">
                                             <input
                                                 type="email"
                                                 {...register('email', { required: true })}
@@ -95,6 +92,7 @@ const Contact2 = () => {
                                             />
                                             {errors.email && <span className="text-red-500">This field is required</span>}
                                         </label>
+
                                         <div className="w-full mt-6">
                                             <label className="block mb-2 text-sm text-gray-600 text-left dark:text-gray-200">Message</label>
                                             <textarea
@@ -104,17 +102,15 @@ const Contact2 = () => {
                                             ></textarea>
                                             {errors.message && <span className="text-red-500">This field is required</span>}
                                         </div>
+
                                         <button
                                             type="submit"
                                             className="btn"
                                         >
                                             Send...
                                         </button>
-
                                     </form>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -122,6 +118,6 @@ const Contact2 = () => {
             </section>
         </div>
     );
-}
+};
 
 export default Contact2;
