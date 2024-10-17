@@ -22,11 +22,11 @@ import { CreatAuthContext } from './Authprovider'
 // css
 import './style.css'
 import Banner from './banner/Banner'
-import Skills from './slills/Skills'
+// import Skills from './slills/Skills'
 import Servises from "./ServisesSection/Servises";
 import Contact2 from "./Contact2";
 import { MdEmail } from "react-icons/md";
-import Allskills from "./slills/Allskills";
+import Project from "./slills/Project";
 
 
 
@@ -130,8 +130,8 @@ const Home = () => {
                                     <div>
 
 
-                                        <div class="contain">
-                                            <div class="btn"><a href="#">Portfolio</a></div>
+                                        <div className="contain">
+                                            <div className="btn"><a href="#">Portfolio</a></div>
                                         </div>
 
                                     </div>
@@ -151,7 +151,7 @@ const Home = () => {
 
 
                                             <input onChange={handelchange} id="checkboxInput" type="checkbox" />
-                                            <label class="toggleSwitch" value="synthwave" for="checkboxInput">
+                                            <label className="toggleSwitch" value="synthwave" for="checkboxInput">
                                             </label>
 
                                             {/* sun icon */}
@@ -195,8 +195,8 @@ const Home = () => {
                                     <div className="flex lg:pr-10   bg-[#333333] lg:bg-transparent flex-col lg:-mx-6 lg:flex-row lg:items-center pl-14  lg:pl-0 -ml-[4.5rem]">
 
 
-                                        <button class="button mb-2 lg:mb-0">
-                                            <div class="display">
+                                        <button className="button mb-2 lg:mb-0">
+                                            <div className="display">
                                                 <div id="msg">
                                                     <Link to={'/'}>Home</Link>
                                                 </div>
@@ -205,8 +205,8 @@ const Home = () => {
                                             <span></span>
                                             <span></span>
                                         </button>
-                                        <button class="button mb-2 lg:mb-0">
-                                            <div class="display">
+                                        <button className="button mb-2 lg:mb-0">
+                                            <div className="display">
                                                 <div id="msg">
                                                     <a href="#skill" >Skill</a>
                                                 </div>
@@ -215,8 +215,8 @@ const Home = () => {
                                             <span></span>
                                             <span></span>
                                         </button>
-                                        <button class="button mb-2 lg:mb-0">
-                                            <div class="display">
+                                        <button className="button mb-2 lg:mb-0">
+                                            <div className="display">
                                                 <div id="msg">
                                                     <a href="#services" >Service's</a>
                                                 </div>
@@ -225,8 +225,8 @@ const Home = () => {
                                             <span></span>
                                             <span></span>
                                         </button>
-                                        <button class="button mb-2 lg:mb-0">
-                                            <div class="display">
+                                        <button className="button mb-2 lg:mb-0">
+                                            <div className="display">
                                                 <div id="msg">
                                                     <a href="#portfolio" >Portfolio</a>
                                                 </div>
@@ -235,8 +235,8 @@ const Home = () => {
                                             <span></span>
                                             <span></span>
                                         </button>
-                                        <button class="button mb-2 lg:mb-0">
-                                            <div class="display">
+                                        <button className="button mb-2 lg:mb-0">
+                                            <div className="display">
                                                 <div id="msg">
                                                     <a href='#contact' >Contact</a>
                                                 </div>
@@ -365,7 +365,8 @@ const Home = () => {
             {/* job section */}
             <section id="skill" >
 
-                <Skills></Skills>
+                {/* <Skills></Skills> */}
+                <Project></Project>
 
 
             </section>
@@ -389,7 +390,6 @@ const Home = () => {
                                 <TabList >
                                     <Tab>Frontend Project || React Js</Tab>
                                     <Tab>MERN Strack Project</Tab>
-                                    <Tab>Web Design</Tab>
                                 </TabList>
                             </div>
 
@@ -465,35 +465,7 @@ const Home = () => {
                                         </div>
                                     </TabPanel>
 
-                                    <TabPanel>
-                                        <div data-aos="fade-down"
-                                            data-aos-easing="linear"
-                                            data-aos-duration="1500" className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-                                            <a href="https://sujob258549.github.io/project1">
-                                                <div className="relative overflow-hidden bg-cover object-cover rounded-lg cursor-pointer h-80 group" style={{ backgroundImage: "url('https://sujob258549.github.io/project1/img/vat11.png", boxShadow: '1px 1px 50px #01ECFF' }}>
-                                                    <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 group-hover:opacity-0 backdrop-blur-sm bg-gray-800/60 opacity-100">
-                                                        <FaExternalLinkAlt className="text-4xl text-white text-center mx-auto"></FaExternalLinkAlt>
-                                                        <h2 className="mt-4 text-center text-xl font-semibold text-white capitalize">Dog Hospitality product </h2>
-                                                        <p className="mt-2 text-center text-lg tracking-wider text-blue-400 uppercase">Visit This Website</p>
-
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="https://sujob258549.github.io/silverhok/Home">
-                                                <div className="relative overflow-hidden bg-cover object-cover rounded-lg cursor-pointer h-80 group" style={{ backgroundImage: "url('https://sujob258549.github.io/silverhok/img/abput2.png", boxShadow: '1px 1px 50px #01ECFF' }}>
-                                                    <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 group-hover:opacity-0 backdrop-blur-sm bg-gray-800/60 opacity-100">
-                                                        <FaExternalLinkAlt className="text-4xl text-white text-center mx-auto"></FaExternalLinkAlt>
-                                                        <h2 className="mt-4 text-center text-xl font-semibold text-white capitalize">Selver hoq webside</h2>
-                                                        <p className="mt-2 text-center text-lg tracking-wider text-blue-400 uppercase">Visit This Website</p>
-
-                                                    </div>
-                                                </div>
-                                            </a>
-
-
-
-                                        </div>
-                                    </TabPanel>
+                                 
                                 </div>
                             </section>
 
@@ -542,7 +514,7 @@ const Home = () => {
                 </section>
 
             </section>
-            <Allskills></Allskills>
+            {/* <Allskills></Allskills> */}
         </div>
     );
 };

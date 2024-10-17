@@ -1,4 +1,4 @@
-import React from "react";
+
 import AnimatedCursor from "react-animated-cursor";
 
 export default function Allskills() {
@@ -9,7 +9,7 @@ export default function Allskills() {
         outerSize={35} // This should now work
         innerScale={1}
         outerScale={2}
-        outerAlpha={0.3} // Set a bit of transparency
+        outerAlpha={0} // Set a bit of transparency
         hasBlendMode={true}
         innerStyle={{
           backgroundColor: '#01ecff' // Test with an actual color

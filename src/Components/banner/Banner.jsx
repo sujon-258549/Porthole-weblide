@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './banner.css'
 import { useTypewriter } from 'react-simple-typewriter';
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaPhoneSquare } from 'react-icons/fa';
@@ -9,7 +9,7 @@ const Banner = () => {
 
 
     const [text] = useTypewriter({
-        words: ['React js Developer', 'Frontend developer', 'MERN stack developer', 'Web developer!'],
+        words: ['React.js Developer', 'Frontend Developer', 'MERN Stack Developer', 'Web Developer'],
         loop: 0
     })
 
@@ -37,8 +37,7 @@ const Banner = () => {
                             {/* <div class="loader">
                                 <span class="loader-text">Hi I,am Sujon Mia</span>
                             </div> */}
-                            <p className="text-[16px] text-white mt-6 font-light">I am a highly skilled frontend web developer designing, developing, and maintaining the front-end of web applications. Achieved measurable success in design dynamic, complex and
-                                interactive user experience. Highly experienced and proficient in React JS.
+                            <p className="text-[16px] text-white mt-6 font-light">I am a highly skilled frontend web developer specializing in designing, developing, and maintaining the front end of web applications. With a strong focus on creating dynamic, complex, and interactive user experiences, I have achieved measurable success in delivering projects that meet both user needs and business goals. My expertise in React.js allows me to build efficient and responsive applications, ensuring optimal performance and usability. I am passionate about leveraging the latest technologies and best practices to create innovative solutions that enhance user engagement and satisfaction.
                             </p>
 
                             <div className='flex gap-2 justify-center lg:justify-start pt-10'>
@@ -69,12 +68,12 @@ const Banner = () => {
                         </div>
 
 
-{/* image  */}
+                        {/* image  */}
                         <div>
-                     
+
                             <div id="Container">
-                                <div class="form">
-                                   <img className='h-[250px] w-full' src="https://i.ibb.co.com/ZKvK5Sk/sujon-removebg-preview-1.png" alt="" />
+                                <div className="form">
+                                    <img className='h-[250px] w-full' src="https://i.ibb.co.com/ZKvK5Sk/sujon-removebg-preview-1.png" alt="" />
                                 </div>
 
                                 <div id="rays">
